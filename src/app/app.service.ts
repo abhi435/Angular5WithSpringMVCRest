@@ -14,7 +14,7 @@ export class AppService {
 
   public getUserData(): Observable<any> {
     return this.http.get(this.apiUrl)
-      .map((res: Response) => res.json())
+      .map((response: Response) => response.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
